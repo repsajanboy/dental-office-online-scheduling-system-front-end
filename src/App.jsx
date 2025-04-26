@@ -1,16 +1,25 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 import Navbar from "./components/Navbar";
-
+import { Routes, Route } from "react-router";
+import Home from "./routes/Home";
+import Login from "./routes/Login";
+import Footer from "./components/Footer";
+import Register from "./routes/Register";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="min-h-screen flex flex-col bg-gray-50">
+      <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<Register />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </>
   );
