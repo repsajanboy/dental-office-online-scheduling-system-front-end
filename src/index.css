@@ -3,5 +3,32 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
+
+.react-calendar {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+  padding: 10px 6px;
+  transition: background-color 0.2s;
+}
+
+.react-calendar__tile:hover {
+  background: #bfdbfe; /* light blue hover */
+}
+
+.react-calendar__tile--now {
+  background: #93c5fd; /* today's date */
+  color: white;
+}
+
+.react-calendar__tile--active {
+  background: #2563eb; /* selected date */
+  color: white;
+}

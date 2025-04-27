@@ -26,12 +26,9 @@ function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <div className="flex-1 p-8">
+      <h1 className="text-3xl font-bold mb-6">My Profile</h1>
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-lg">
-        <h1 className="text-3xl font-bold text-center text-blue-600 mb-8">
-          My Profile
-        </h1>
-
         <div className="space-y-6">
           {/* Name */}
           <div>

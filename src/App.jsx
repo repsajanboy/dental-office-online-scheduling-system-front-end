@@ -8,22 +8,24 @@ import Register from "./routes/Register";
 import Booking from "./routes/Booking";
 import Dashboard from "./routes/Dashboard";
 import Profile from "./routes/Profile";
+import LayoutWithNavbar from "./layouts/LayoutWithNavbar";
+import LayoutWithSidebar from "./layouts/LayoutWithSidebar";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div className="min-h-screen flex flex-col bg-white">
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/sign-up" element={<Register />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route element={<LayoutWithNavbar />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<Register />} />
+          </Route>
+          <Route element={<LayoutWithSidebar />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
         </Routes>
-        <Footer />
       </div>
     </>
   );
