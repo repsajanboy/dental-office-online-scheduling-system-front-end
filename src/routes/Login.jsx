@@ -10,7 +10,7 @@ function Login() {
             ToothFairy Clinic
           </h1>
           <p className="text-gray-500 mt-2">
-            Welcome back! Please login to your account.
+            Please login to your account to book an appointment
           </p>
         </div>
 
@@ -47,6 +47,7 @@ function Login() {
           </div>
 
           <button
+            href="/booking"
             type="submit"
             className="w-full bg-blue-600 text-white py-3 rounded-full font-semibold hover:bg-blue-700 transition"
           >
@@ -57,7 +58,7 @@ function Login() {
         {/* Footer */}
         <p className="text-center text-sm text-gray-500 mt-6">
           Don't have an account?{" "}
-          <a href="/sign-up" className="text-blue-600 hover:underline">
+          <a href="/booking" className="text-blue-600 hover:underline">
             Sign Up
           </a>
         </p>

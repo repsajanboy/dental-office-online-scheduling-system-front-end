@@ -5,6 +5,9 @@ import Home from "./routes/Home";
 import Login from "./routes/Login";
 import Footer from "./components/Footer";
 import Register from "./routes/Register";
+import Booking from "./routes/Booking";
+import Dashboard from "./routes/Dashboard";
+import Profile from "./routes/Profile";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -12,13 +15,14 @@ function App() {
     <>
       <div className="min-h-screen flex flex-col bg-white">
         <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/sign-up" element={<Register />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<Register />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
         <Footer />
       </div>
     </>
