@@ -1,7 +1,12 @@
 import React from "react";
 import { FiPhone } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 function HeroSection() {
+  const navigate = useNavigate();
+  const handleBooking = () => {
+    navigate("/login");
+  };
   return (
     <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 py-12 max-w-7xl mx-auto gap-4">
       <div className="md:w-1/2 text-center md:text-left space-y-6 flex flex-col justify-evenly gap-20">
@@ -16,7 +21,7 @@ function HeroSection() {
         </p>
         <div className="flex flex-col items-center md:flex-row gap-5">
           <div className="md:w-1/2 text-center md:text-left space-y-6">
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+            <button onClick={handleBooking} className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
               Book an appointment
             </button>
           </div>

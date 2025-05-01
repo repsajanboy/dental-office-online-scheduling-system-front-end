@@ -3,18 +3,18 @@ import React from "react";
 function AboutSection() {
   const team = [
     {
-      name: "Dr. Emily Carter",
-      role: "Chief Dentist",
+      name: "Dr. Sarah Johnson",
+      role: "Orthodontist",
       image: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
-      name: "Dr. John Smith",
-      role: "Orthodontist",
+      name: "Dr. Michael Lee",
+      role: "Pediatric Dentist",
       image: "https://randomuser.me/api/portraits/men/45.jpg",
     },
     {
-      name: "Dr. Lisa Wong",
-      role: "Cosmetic Dentist",
+      name: "Dr. Emma Watson",
+      role: "Periodontist",
       image: "https://randomuser.me/api/portraits/women/46.jpg",
     },
   ];
